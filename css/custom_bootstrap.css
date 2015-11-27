@@ -1,0 +1,30 @@
+
+#nav-bar{
+	border-radius: 0px;
+}
+
+#btn-hm span{
+	background-color: grey;
+}
+
+#categorias h1{
+	margin-bottom: 20px;
+}
+
+#busqueda{
+	margin-bottom: 40px;
+}
+
+#carrusel{
+	margin-bottom: 20px;
+}
+
+#descripcion{
+	margin: 5px;
+	padding: 10px;
+	text-align: justify;
+}
+
+#panel-comentarios{
+	margin-top: 20px;
+}

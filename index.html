@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>E-commerce</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/custom_bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/flat-ui.min.css">
+	
+		<meta charset ="utf-8">
+	</head>
+
+	<body>
+
+		
+		<nav class="navbar navbar-inverse" id="nav-bar">
+			<div class="container">
+
+				<!--ESTADO HAMBURGUER DEL NAVBAR-->		
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-ppal" id="btn-hm" aria-expanded="false">
+					  <span class="sr-only">Navegación Hamburguesa</span>
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>
+					</button>		
+
+					<a class="navbar-brand" href="#">E-commerce</a>
+				</div>
+
+				<!--ESTADO NORMAL DEL NAVBAR-->
+				<div class="collapse navbar-collapse" id="menu-ppal">
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="#"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true">   Canasta</span></a>
+						</li>
+						<li>
+							<a href="#"><span class="glyphicon" aria-hidden="true">Salir</span></a>
+						</li>
+					</ul>
+				</div>	
+		
+			</div>	<!--FIN CONTAINER-->					
+		</nav>
+		
+		<div class="container">
+			
+			<div class="row">
+
+				<!--PARTE LATERAL IZQUIERDA-->
+				<!--ESPACIO DE BUSQUEDA-->
+				<div class="col-lg-3">
+					<div class="input-group" id="busqueda">
+
+				      <input type="text" class="form-control" placeholder="Buscar Camisetas">
+					      <span class="input-group-btn">
+					        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+					      </span>
+					  </input>
+					</div>
+					<!--PARTE LATERAL IZQUIERDA-->
+					<!--LISTA DE CATEGORIAS-->
+					<div id="categorias" class="hidden-md hidden-sm hidden-xs">
+						<center><h3>Categorías</h3></center>
+						<ul class="list-group">
+							
+							<a href="#" class="list-group-item active">
+								<span class="badge">100</span>
+								Todas
+							</a>
+
+							<a href="#" class="list-group-item">
+								<span class="badge">10</span>
+								Hombre
+							</a>
+
+							<a href="#" class="list-group-item">
+								<span class="badge">20</span>
+								Mujer
+							</a>
+
+							<a href="#" class="list-group-item">
+								<span class="badge">40</span>
+								Hipster
+							</a>
+
+							<a href="#" class="list-group-item">
+								<span class="badge">10</span>
+								Metal
+							</a>
+
+							<a href="#" class="list-group-item">
+								<span class="badge">10</span>
+								Universidad
+							</a>
+
+							<a href="#" class="list-group-item">
+								<span class="badge">10</span>
+								Deportiva
+							</a>
+						</ul>					
+						
+					</div>
+					
+				</div>
+				<!--CARRUSEL-->
+				<div class="col-lg-9">
+					<div id="carrusel" class="carousel slide" data-ride="carousel">
+					  <!-- BOLITAS DE ABAJO (INDICADORES) -->
+					  <ol class="carousel-indicators">
+					    <li data-target="#carrusel" data-slide-to="0" class="active"></li>
+					    <li data-target="#carrusel" data-slide-to="1"></li>
+					    <li data-target="#carrusel" data-slide-to="2"></li>
+					  </ol>
+
+					  <!-- WRAPPER DE LOS SLIDERS -->
+					  <div class="carousel-inner" role="listbox">
+					    <div class="item active">
+					      <img src="assets/banner-slider-1.jpg" alt="Camisa">
+					    </div>
+
+					    <div class="item">
+					      <img src="assets/banner-slider-2.jpg" alt="Camisa">
+					    </div>
+
+					    <div class="item">
+					      <img src="assets/banner-slider-3.jpg" alt="Camisa">
+					    </div>
+					  </div>
+
+					  <!-- CONTROL DE LAS FLECHITAS -->
+					  <a class="left carousel-control" href="#carrusel" role="button" data-slide="prev">
+					    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					    <span class="sr-only">Previous</span>
+					  </a>
+					  <a class="right carousel-control" href="#carrusel" role="button" data-slide="next">
+					    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					    <span class="sr-only">Next</span>
+					  </a>
+					</div>
+					
+					<div class="row">
+						<!--PANELES DE PRODUCTOS-->
+						
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+							<div class="panel panel-default">
+							  <div class="panel-body">
+							    <img src="assets/camiseta-1.jpg" alt="camiseta">
+							    <h3>Camiseta 1</h3>
+							    <p>La magnifica camiseta 1</p>
+							    <button class="btn btn-primary">
+							    	229$
+							    	<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+							    </button>
+
+							    <button class="btn btn-default" data-toggle="modal" data-target="#detalles">
+							    	Detalles
+							    </button>
+
+							    <div class="modal fade" id="detalles">
+							    	<div class="modal-dialog">
+							    		<div class="modal-content">
+							    			<div class="modal-header">
+							    				<h4>
+							    					Camiseta 1
+							    					<button type="button" class="close" aria-label="Close" data-dismiss="modal">
+							    						<span aria-hidden="true">&times;</span>
+							    					</button>
+							    				</h4>
+							    			</div>
+							    			<div class="modal-body">
+												<!--ALERT-->
+							    				<div class="row">
+							    					<div class="col-lg-12">
+							    						<div class="alert alert-info">
+							    							<p>
+							    								<span class="glyphicon glyphicon-exclamation-sign">
+							    									
+							    								</span>
+							    								Este producto está agotado
+							    							</p>
+							    						</div>
+							    					</div>
+													
+							    				</div>
+
+	    										<!--IMAGEN Y DESCRIPCION-->
+	    				    					<div class="row">
+	    				    						<div class="col-lg-6">
+	    				    							<div class="panel panel-default">
+	    				    							  <div class="panel-body">
+	    				    							    <img src="assets/camiseta-2.jpg" alt="camiseta">
+	    				    							  </div>
+	    				    							</div>
+	    				    						</div>
+
+	    				    						<div class="col-lg-6">
+	    				    							<p>Precio: <strong>$299</strong></p>
+	    				    							<p>
+	    				    								Calificación: 
+	    				    								<span class="glyphicon glyphicon-star"></span>
+	    				    								<span class="glyphicon glyphicon-star"></span>
+	    				    								<span class="glyphicon glyphicon-star"></span>
+	    				    								<span class="glyphicon glyphicon-star"></span>
+	    				    								<span class="glyphicon glyphicon-star-empty"></span>
+	    				    							</p>
+	    				    							<p>
+	    				    								<span class="label label-default">Hipster</span>
+	    				    								<span class="label label-warning">Metal</span>
+	    				    							</p>
+	    				    							<p>
+	    				    								<a href="#">
+	    				    									<span class="glyphicon glyphicon-heart"></span>  Agregar a deseados
+	    				    								</a>
+	    				    							</p>
+
+	    				    						</div>
+	    				    					</div>
+	    										<!--PESTAÑAS-->
+
+	    				    					<div class="row">
+	    				    						<div class="col-lg-12">
+	    				    							<ul class="nav nav-tabs">
+														
+	    				    							  <li class="active">
+	    				    							  	<a href="#descripcion" data-toggle="tab">
+	    				    							  		Descripción
+	    				    							  	</a>
+	    				    							  </li>
+
+	    				    							  <li>
+	    				    							  	<a href="#comentarios" data-toggle="tab">
+	    				    							  		Comentarios
+	    				    							  	</a>
+	    				    							  </li>
+	    				    							</ul>
+
+	    				    							<div class="tab-content">
+
+	    				    								<div class="tab-pane fade in active" id="descripcion">
+	    				    									<p>
+	    				    										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique ipsa assumenda repellendus vero error nesciunt ducimus nemo veniam doloremque quia! Consequuntur maiores, quod sit! Aliquid aut voluptate nemo neque odit.
+	    				    									</p>
+	    				    								</div>
+
+	    				    								<div class="tab-pane fade" id="comentarios">
+
+	    				    									<div class="panel panel-default" id="panel-comentarios">
+	    				    										<div class="panel-heading">
+	    				    											<h4 class="panel-title">Pepito comentó hace 2 días.</h4>
+	    				    										</div>
+	    				    										<div class="panel-body">
+	    				    											Excelente camiseta!
+	    				    										</div>
+	    				    									</div>
+	    				    									<textarea name="Comentario" rows="5" class="form-control" placeholder="Ingresa tu comentario."></textarea>
+	    				    								</div>
+	    				    								
+	    				    							</div>
+	    				    						</div>
+	    				    					</div>
+							    				
+							    			</div>	
+
+							    			<div class="modal-footer">
+							    				<button class="btn btn-primary btn-right">
+							    					Comprar
+							    				</button>
+
+							    				<button class="btn btn-default btn-right">
+							    					Salir
+							    				</button>
+							    			</div>		
+							    		</div>
+							    	</div>
+							    </div>
+							  </div>
+							</div>
+						</div>
+
+
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+							<div class="panel panel-default">
+							  <div class="panel-body">
+							    <img src="assets/camiseta-2.jpg" alt="camiseta">
+							    <h3>Camiseta 2</h3>
+							    <p>La magnifica camiseta 2</p>
+							    <button class="btn btn-primary">
+							    	229$
+							    	<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+							    </button>
+
+							    <button class="btn btn-default">
+							    	Detalles
+							    </button>
+							  </div>
+							</div>
+						</div>
+
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+							<div class="panel panel-default">
+							  <div class="panel-body">
+							    <img src="assets/camiseta-3.jpg" alt="camiseta">
+							    <h3>Camiseta 3</h3>
+							    <p>La magnifica camiseta 3</p>
+
+							    <button class="btn btn-primary">
+							    	229$
+							    	<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+							    </button>
+
+							    <button class="btn btn-default">
+							    	Detalles
+							    </button>
+							  </div>
+							</div>
+						</div>
+
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+							<div class="panel panel-default">
+							  <div class="panel-body">
+							    <img src="assets/camiseta-4.jpg" alt="camiseta">
+							    <h3>Camiseta 4</h3>
+							    <p>La magnifica camiseta 4</p>
+							    <button class="btn btn-primary">
+							    	229$
+							    	<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+							    </button>
+
+							    <button class="btn btn-default">
+							    	Detalles
+							    </button>
+							  </div>
+							</div>
+						</div>
+
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+							<div class="panel panel-default">
+							  <div class="panel-body">
+							    <img src="assets/camiseta-5.jpg" alt="camiseta">
+							    <h3>Camiseta 5</h3>
+							    <p>La magnifica camiseta 5</p>
+							    <button class="btn btn-primary">
+							    	229$
+							    	<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+							    </button>
+
+							    <button class="btn btn-default">
+							    	Detalles
+							    </button>
+							  </div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+
+			</div>
+		</div>	<!--FIN CONTAINER-->
+
+
+
+		<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	</body>
+</html>
